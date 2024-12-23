@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" name="" id="txt_input1">
+        <label for="" id="lbl_input1">0</label>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <button id="btn_proses">proses</button>
+    </div>
+
+    <!-- internal JS -->
+
+    <script>
+        // buat variabel
+        let txt_input1;
+        let lbl_input1;
+        let jumlah_input1;
+        let btn_proses;
+
+        // definisi variabel
+        txt_input1 = document.querySelector("txt_input1");
+        lbl_input1 = document.querySelector("lbl_input1");
+        jml = txt.value.length;
+        lbl.innerHTML = jml;
+
+
+
+        // buat arrow function
+        const getCounter = (txt, lbl, jml) => {
+            jml = txt.value.length;
+            lbl.innerHTML = jml;
+
+            // jika jumlah karakter >= 8
+            if (jml >= 8) {
+                // non aktifkan "btn_proses"
+                btn_proses.disabled = false;
+            }
+            // jika jumlah karakter < 8
+            else {
+                btn_proses.disabled = true;
+            }
+
+        };
+
+        // buat event
+        txt_input1.addEventListener("keyup", function () {
+            getCounter(txt_input1, lbl_input1, jumlah_input1)
+        });
+
+        btn_proses.addEventListener("keyup", function () {
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>

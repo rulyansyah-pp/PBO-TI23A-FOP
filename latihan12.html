@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+
+<body>
+    <button id="btn_hitung">Hitung</button>
+    <button id="btn_reset">Reset</button>
+
+    <!-- internal JS -->
+    <script>
+        // buat variabel untuk "btn_hitung"
+        const btn_hitung = document.querySelector("#btn_hitung");
+        const btn_reset = document.querySelector("#btn_reset");
+
+        // buat event "click" untuk "btn_hitung"
+        btn_hitung.addEventListener("click", function () {
+            this.innerHTML = "Proses";
+            this.style.backgroundColor = "#FFCC00"
+
+            btn_reset.innerHTML = "Refresh";
+            btn_reset.style.color = "#FF0000"
+        });
+
+        // buat event "hover" untuk "btn_reset"
+        btn_reset.addEventListener("mouseover", function () {
+            this.style.backgroundColor = "#FFCC00"
+
+        });
+        btn_reset.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "#000000"
+            btn_reset.style.color = "#FFFFFF"
+
+        });
+    </script>
+</body>
+
+</html>

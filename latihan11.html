@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+
+<body>
+    <!-- buat elemen/object button -->
+    <button id="btn_start">Start</button>
+    <button id="btn_stop">Stop</button>
+
+    <button class="btn-mulai">Mulai</button>
+    <button class="btn-mulai">Selesai</button>
+
+    <!-- internal JS -->
+    <script>
+        // buat kode untuk klik button 
+        // 1. (tag) 
+        // document.querySelectorAll('button')[0].innerHTML = " Mulai"; 
+        // documenterySelectorAll('button')[1].innerHTML = "Selesai";
+
+
+        // 2. metode "ID" 
+        document.querySelector("#btn_start").innerHTML = "Mulai"
+        document.querySelector("#btn_stop").innerHTML = "Selesai"
+
+        // 3. metode "CLASS"
+        document.querySelectorAll(".btn-mulai")[0].innerHTML = "Start"
+        document.querySelectorAll(".btn-mulai")[1].innerHTML = "Stop"
+
+    </script>
+</body>
+
+</html>

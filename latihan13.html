@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events (Ternary Operator)</title>
+</head>
+
+<body>
+    <input type="text" id="txt_nilai1" placeholder="isi nilai 1" maxlength="5">
+    <input type="text" id="txt_nilai2" placeholder="isi nilai 2" maxlength="5">
+    <select name="" id="cbo_operasi">
+        <option value="" selected>Pilih Jenis Operasi</option>
+        <option value="penjumlahan">Penjumlahan</option>
+        <option value="pengurangan">Pengurangan</option>
+        <option value="perkalian">Perkalian</option>
+    </select>
+    <input type="text" id="txt_hasil" placeholder="Hasil Perhitungan" readonly>
+    <button id="btn_hitung">Hitung</button>
+
+    <!-- internal JS -->
+    <script>
+        // buat variabel
+        let nilai1, nilai2, operasi, hasil;
+
+        // definisikan variabel
+        nilai1 = document.querySelector("#txt_nilai1");
+        nilai2 = document.querySelector("#txt_nilai2");
+        operasi = document.querySelector("#cbo_operasi");
+        hasil = document.querySelector("#txt_hasil");
+
+        // buat event untuk "btn_hitung"
+        document.querySelector("#btn_hitung").addEventListener("click", setHitung);
+
+        // buat function "setHitung"
+        function setHitung() {
+            // alert("Tombol di Klik")
+            proses = parseInt(nilai1.value) + parseInt(nilai2.value);
+            // tampilkan output nya
+            hasil.value = proses;
+        }
+    </script>
+
+</body>
+
+</html>

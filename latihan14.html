@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<htm2 lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function (internal)</title>
+    </head>
+
+    <body>
+        <!-- buat text -->
+        <div style="margin-bottom: 10px;">
+            <input type="text" name="" id="txt_input1">
+            <label for="" id="lbl_input1">0</label>
+        </div>
+
+        <div>
+            <input type="text" name="" id="txt_input2">
+        </div>
+
+        <div>
+            <button id="btn_proses">Proses</button>
+        </div>
+
+        <!-- Internal JS -->
+        <script>
+            // variabel
+            let txt_input1, txt_input2;
+            let lbl_input1, lbl_input2;
+            let btn_proses;
+            let jumlah_input1, jumlah_input2;
+
+            // definisi variabel
+            txt_input1 = document.querySelector("#txt_input1");
+            txt_input2 = document.querySelector("#txt_input2");
+            lbl_input1 = document.querySelector("#lbl_input1");
+            btn_proses = document.querySelector("#btn_proses");
+            jumlah_input1 = 0;
+
+            // buat fungsi (standar)
+            function getCounter(txt) {
+                // hitung jumlah karakter yang diisi
+                jumlah_input1 = txt.value.length;
+                //tampilkan hasul di label
+                lbl_input1.innerHTML = jumlah_input1;
+                console.log("txt_input1 value:", txt_input1.value);
+                console.log("txt_input2 value:", txt_input2.value);
+                console.log("lbl_input1 value:", lbl_input1.innerHTML);
+                console.log("btn_proses clicked");roses clicked");
+            }
+
+            function test() {
+                console.log("klik tombil proses");
+            }
+
+            // buat event
+            txt_input1.addEventListener("keyup", function () {
+                getCounter(txt_input1)
+            });
+
+            txt_input2.addEventListener("keyup", function () {
+                getCounter(txt_input2)
+            });
+
+            btn_proses.addEventListener("click", test);
+        </script>
+    </body>
+
+</htm2>
+
+</html>

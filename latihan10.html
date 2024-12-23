@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 10 (IF)</title>
+</head>
+
+<body>
+    <!-- Internal JS -->
+    <script>
+        // buat variabel
+        let nilai_tugas, nilai_kuis, nilai_uts, nilai_uas;
+        let nilai_angka, nilai_huruf;
+
+        // isi nilai variabel
+        nilai_tugas = 80;
+        nilai_kuis = 72;
+        nilai_uts = 85;
+        nilai_uas = 90;
+
+        nilai_angka = (0.1 * nilai_tugas) + (0.2 * nilai_kuis) + (0.3 * nilai_uts) + (0.4 * nilai_uas);
+
+        // jika nilai angka 90-100
+        if (nilai_angka >= 90 && nilai_angka <= 100) {
+            nilai_huruf = "A";
+        }
+
+        // jika nilai angka 80-89
+        else if (nilai_angka >= 80 && nilai_angka <= 89) {
+            nilai_huruf = "B";
+        }
+
+        // jika nilai angka 70-79
+        else if (nilai_angka >= 70 && nilai_angka <= 79) {
+            nilai_huruf = "C";
+        }
+
+        // jika nilai angka 60-69
+        else if (nilai_angka >= 60 && nilai_angka <= 69) {
+            nilai_huruf = "D";
+        }
+
+        // jika nilai angka 0-59
+        else if (nilai_angka >= 0 && nilai_angka <= 59) {
+            nilai_huruf = "E";
+        }
+
+        document.write(`Nilai : ${nilai_angka} <br>Huruf : ${nilai_huruf} `);
+
+    </script>
+</body>
+
+</html>
